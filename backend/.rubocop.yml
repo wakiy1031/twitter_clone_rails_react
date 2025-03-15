@@ -1,0 +1,31 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-hc
+  - rubocop-factory_bot
+Style/Documentation:
+  Enabled: false
+AllCops:
+  NewCops: enable
+RSpec/MultipleExpectations:
+  Max: 2
+Metrics/MethodLength:
+  Max: 30
+Hc/RailsSpecificActionName:
+  Exclude:
+    - "app/controllers/api/v1/posts_controller.rb"
+    - "app/controllers/api/v1/comments_controller.rb"
+  AllowedNames:
+    - upload_images
+  ActionNames:
+    - create
+    - destroy
+    - edit
+    - index
+    - new
+    - show
+    - update
+    - update_profile
+Metrics/BlockLength:
+  Exclude:
+    - "config/routes.rb"

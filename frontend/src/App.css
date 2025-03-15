@@ -1,0 +1,5 @@
+p {
+  overflow-wrap: anywhere;
+  word-break: normal;
+  line-break: strict;
+}
